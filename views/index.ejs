@@ -1,0 +1,27 @@
+<% include partials/header.ejs %>
+<div class="table-wrapper">
+    <% if (cars.length > 0) {%>
+<div class="container">
+    <div class="row">
+        <% cars.forEach((car, index) => { %>
+        <div class="col-md-3">
+                <div class="thumbnail">
+                <a href="/view/<%= car.id %>">
+                <img src="/assets/img/<%= car.image %>" alt="Nature" style="width:100%">
+                <div class="caption">
+            <p><%= car.car_name %></p>
+            <a href="/edit/<%= car.id %>" target="_blank" rel="noopener" class="btn btn-sm btn-success">Edit</a>
+            <a href="/delete/<%= car.id %>" class="btn btn-sm btn-danger">Delete</a>
+        </div>
+        </a>
+        </div>
+        </div>
+        <% }) %>
+        </div>
+        <% } else { %>
+        <p class="text-center">No cars found. Go <a href="/add" >here</a> to add cars.</p>
+        <% } %>
+        </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<% include partials/header.ejs %>
+<div class="table-wrapper">
+    <% if (players.length > 0) {%>
+    <div>
+        <div class="row">
+            <% players.forEach((player, index) => { %>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="/assets/img/<%= player.image %>">
+                        <img src="/assets/img/<%= player.image %>" alt="Nature" style="width:100%">
+                        <div class="caption">
+                            <p><%= player.first_name %></p>
+                            <a href="/edit/<%= player.id %>" target="_blank" rel="noopener" class="btn btn-sm btn-success">Edit</a>
+                            <a href="/delete/<%= player.id %>" class="btn btn-sm btn-danger">Delete</a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+        <% } else { %>
+        <p class="text-center">No cars found. Go <a href="/add" >here</a> to add cars.</p>
+        <% } %>
+    </div>
+</div>
+</body>
+</html>
