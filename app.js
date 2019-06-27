@@ -11,10 +11,11 @@ const port = 5000;
 // create connection to database
 // the mysql.createConnection function takes in a configuration object which contains host, user, password and the database name.
 const db = mysql.createConnection ({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'cars'
+    host: 'bzbfafebqcv8qi9bu2ht-mysql.services.clever-cloud.com\n',
+    user: 'u9lrmhkgfgpeoayv',
+    password: '0kGoIaiYJnVljNOmo6y1',
+    database: 'bzbfafebqcv8qi9bu2ht',
+    port: 3306
 });
 
 // connect to database
