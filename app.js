@@ -7,7 +7,7 @@ const app = express();
 
 const {getHomePage} = require('./routes/index');
 const {addCarPage, addCar, deleteCar, editCar, editCarPage, viewCars, getPrice, login, loginUser} = require('./routes/cars');
-const port = 5000;
+const port = 8080;
 // create connection to database
 // the mysql.createConnection function takes in a configuration object which contains host, user, password and the database name.
 const db = mysql.createConnection ({
